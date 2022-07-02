@@ -1,6 +1,6 @@
 import dash
 import dash_bootstrap_components as dbc
-import psutil
+import socket
 
 
 
@@ -13,7 +13,7 @@ server = app.server
 
 
 app.layout = dbc.Container([
-    dbc.Label(f'hi, {psutil.Process().username()}'),
+    dbc.Label(f'hi, {socket.getfqdn()}'),
 ])
 
 
